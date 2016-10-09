@@ -5,6 +5,7 @@ target 'Elo7Test' do
     pod 'Alamofire'
     pod 'AlamofireObjectMapper', '~> 4.0'
     pod 'AlamofireNetworkActivityIndicator'
+    pod 'AlamofireImage', '~> 3.1'
     pod 'ReachabilitySwift'
 
     pod 'RxSwift', '~> 3.0.0-beta.2'

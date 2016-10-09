@@ -30,7 +30,10 @@ class AlbumsView: UIViewController {
         
         viewModel.albums
             .bindTo(tableView.rx.items(cellIdentifier: "AlbumCellId")) { index, model, cell in
-            cell.textLabel?.text = model.title
+                if let albumCell = cell as? AlbumTableViewCell {
+                    albumCell.circularImageView.loadAsync(withImageUrl: model.thumbnailUrl)
+                    albumCell.titleLabel?.text = model.title
+                }
         }.addDisposableTo(bag)
 
         viewModel.loaded
