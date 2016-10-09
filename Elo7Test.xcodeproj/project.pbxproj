@@ -14,6 +14,11 @@
 		265F04C11DA9B98C0011D977 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265F04BF1DA9B98C0011D977 /* LaunchScreen.storyboard */; };
 		265F04CC1DA9B98C0011D977 /* Elo7TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265F04CB1DA9B98C0011D977 /* Elo7TestTests.swift */; };
 		265F04D71DA9B98C0011D977 /* Elo7TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265F04D61DA9B98C0011D977 /* Elo7TestUITests.swift */; };
+		26D89A341DAA9AD300BDD63B /* AlbumDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D89A331DAA9AD300BDD63B /* AlbumDTO.swift */; };
+		26D89A371DAA9CE500BDD63B /* AlbumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D89A361DAA9CE500BDD63B /* AlbumService.swift */; };
+		26D89A3A1DAAA4B400BDD63B /* AlbumRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D89A391DAAA4B400BDD63B /* AlbumRepository.swift */; };
+		26D89A3C1DAAB68D00BDD63B /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D89A3B1DAAB68D00BDD63B /* Album.swift */; };
+		26D89A3F1DAAB85B00BDD63B /* AlbumRepository+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D89A3E1DAAB85B00BDD63B /* AlbumRepository+Async.swift */; };
 		7C0FD13A4340E91F136A7B3C /* Pods_Elo7Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B58613F0C3A75FF256E3626 /* Pods_Elo7Test.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +55,11 @@
 		265F04D21DA9B98C0011D977 /* Elo7TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Elo7TestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		265F04D61DA9B98C0011D977 /* Elo7TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elo7TestUITests.swift; sourceTree = "<group>"; };
 		265F04D81DA9B98C0011D977 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26D89A331DAA9AD300BDD63B /* AlbumDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumDTO.swift; path = Models/AlbumDTO.swift; sourceTree = "<group>"; };
+		26D89A361DAA9CE500BDD63B /* AlbumService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumService.swift; path = Services/AlbumService.swift; sourceTree = "<group>"; };
+		26D89A391DAAA4B400BDD63B /* AlbumRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumRepository.swift; path = Repositories/AlbumRepository.swift; sourceTree = "<group>"; };
+		26D89A3B1DAAB68D00BDD63B /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		26D89A3E1DAAB85B00BDD63B /* AlbumRepository+Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AlbumRepository+Async.swift"; path = "Extensions/AlbumRepository+Async.swift"; sourceTree = "<group>"; };
 		9E9DB11BEEB2D9ABA941D61D /* Pods-Elo7Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elo7Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Elo7Test/Pods-Elo7Test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +114,9 @@
 		265F04B51DA9B98C0011D977 /* Elo7Test */ = {
 			isa = PBXGroup;
 			children = (
+				26D89A3D1DAAB81C00BDD63B /* Extensions */,
+				26D89A381DAAA48700BDD63B /* Repositories */,
+				26D89A351DAA9CC200BDD63B /* Services */,
 				265F04E41DA9B9EE0011D977 /* Models */,
 				265F04B61DA9B98C0011D977 /* AppDelegate.swift */,
 				265F04B81DA9B98C0011D977 /* ViewController.swift */,
@@ -136,8 +149,34 @@
 		265F04E41DA9B9EE0011D977 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				26D89A331DAA9AD300BDD63B /* AlbumDTO.swift */,
+				26D89A3B1DAAB68D00BDD63B /* Album.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		26D89A351DAA9CC200BDD63B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				26D89A361DAA9CE500BDD63B /* AlbumService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		26D89A381DAAA48700BDD63B /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				26D89A391DAAA4B400BDD63B /* AlbumRepository.swift */,
+			);
+			name = Repositories;
+			sourceTree = "<group>";
+		};
+		26D89A3D1DAAB81C00BDD63B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				26D89A3E1DAAB85B00BDD63B /* AlbumRepository+Async.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		C4618E8452818D10F4472C5B /* Frameworks */ = {
@@ -345,8 +384,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26D89A3F1DAAB85B00BDD63B /* AlbumRepository+Async.swift in Sources */,
 				265F04B91DA9B98C0011D977 /* ViewController.swift in Sources */,
 				265F04B71DA9B98C0011D977 /* AppDelegate.swift in Sources */,
+				26D89A341DAA9AD300BDD63B /* AlbumDTO.swift in Sources */,
+				26D89A3A1DAAA4B400BDD63B /* AlbumRepository.swift in Sources */,
+				26D89A371DAA9CE500BDD63B /* AlbumService.swift in Sources */,
+				26D89A3C1DAAB68D00BDD63B /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
