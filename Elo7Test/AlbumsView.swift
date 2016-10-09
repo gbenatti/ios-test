@@ -37,6 +37,19 @@ class AlbumsView: UIViewController {
             .asObservable()
             .subscribe(onNext: { [unowned self] state in self.loadingView.isHidden = state })
             .addDisposableTo(bag)
+        
+        tableView.rx
+            .modelSelected(Album.self)
+            .subscribe(onNext: {album in
+                if let detalhesVC = self.storyboard!
+                    .instantiateViewController(withIdentifier: "DetalhesViewControllerId")
+                    as? DetalhesView {
+                    detalhesVC.viewModel = AlbumDetalhesViewModel(model: album)
+                    self.navigationController?.pushViewController(detalhesVC, animated: true)
+                }
+            
+            })
+            .addDisposableTo(bag)
     }
     
     override func didReceiveMemoryWarning() {
