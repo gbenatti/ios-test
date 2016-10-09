@@ -8,27 +8,32 @@
 
 import UIKit
 import RxSwift
+import RxDataSources
 
-class ViewController: UIViewController {
+class AlbumsView: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
     
     let bag = DisposeBag()
+    let viewModel = AlbumsViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        AlbumRepository
-            .loadAllAsync()
-            .subscribe(onNext: { print($0) } )
-            .addDisposableTo(bag)
-        
-        // Do any additional setup after loading the view, typically from a nib.
+        bindUI()
     }
 
+    private func bindUI()
+    {
+        navigationItem.title = viewModel.title
+
+        viewModel.albums.bindTo(tableView.rx.items(cellIdentifier: "AlbumCellId")) { index, model, cell in
+            cell.textLabel?.text = model.title
+        }.addDisposableTo(bag)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 

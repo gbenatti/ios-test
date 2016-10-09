@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		265F04B71DA9B98C0011D977 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265F04B61DA9B98C0011D977 /* AppDelegate.swift */; };
-		265F04B91DA9B98C0011D977 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265F04B81DA9B98C0011D977 /* ViewController.swift */; };
+		265F04B91DA9B98C0011D977 /* AlbumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265F04B81DA9B98C0011D977 /* AlbumsView.swift */; };
 		265F04BC1DA9B98C0011D977 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265F04BA1DA9B98C0011D977 /* Main.storyboard */; };
 		265F04BE1DA9B98C0011D977 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 265F04BD1DA9B98C0011D977 /* Assets.xcassets */; };
 		265F04C11DA9B98C0011D977 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 265F04BF1DA9B98C0011D977 /* LaunchScreen.storyboard */; };
@@ -19,6 +19,7 @@
 		26D89A3A1DAAA4B400BDD63B /* AlbumRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D89A391DAAA4B400BDD63B /* AlbumRepository.swift */; };
 		26D89A3C1DAAB68D00BDD63B /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D89A3B1DAAB68D00BDD63B /* Album.swift */; };
 		26D89A3F1DAAB85B00BDD63B /* AlbumRepository+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D89A3E1DAAB85B00BDD63B /* AlbumRepository+Async.swift */; };
+		26D89A461DAAC19A00BDD63B /* AlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D89A451DAAC19A00BDD63B /* AlbumsViewModel.swift */; };
 		7C0FD13A4340E91F136A7B3C /* Pods_Elo7Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B58613F0C3A75FF256E3626 /* Pods_Elo7Test.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +45,7 @@
 		1FB9C1868A32258152E715E9 /* Pods-Elo7Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elo7Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Elo7Test/Pods-Elo7Test.release.xcconfig"; sourceTree = "<group>"; };
 		265F04B31DA9B98C0011D977 /* Elo7Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elo7Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		265F04B61DA9B98C0011D977 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		265F04B81DA9B98C0011D977 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		265F04B81DA9B98C0011D977 /* AlbumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsView.swift; sourceTree = "<group>"; };
 		265F04BB1DA9B98C0011D977 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		265F04BD1DA9B98C0011D977 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		265F04C01DA9B98C0011D977 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,6 +61,7 @@
 		26D89A391DAAA4B400BDD63B /* AlbumRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumRepository.swift; path = Repositories/AlbumRepository.swift; sourceTree = "<group>"; };
 		26D89A3B1DAAB68D00BDD63B /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		26D89A3E1DAAB85B00BDD63B /* AlbumRepository+Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "AlbumRepository+Async.swift"; path = "Extensions/AlbumRepository+Async.swift"; sourceTree = "<group>"; };
+		26D89A451DAAC19A00BDD63B /* AlbumsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumsViewModel.swift; path = ViewModels/AlbumsViewModel.swift; sourceTree = "<group>"; };
 		9E9DB11BEEB2D9ABA941D61D /* Pods-Elo7Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elo7Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Elo7Test/Pods-Elo7Test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,12 +116,13 @@
 		265F04B51DA9B98C0011D977 /* Elo7Test */ = {
 			isa = PBXGroup;
 			children = (
+				26D89A441DAAC0FF00BDD63B /* Views */,
+				26D89A431DAAC0C400BDD63B /* ViewModels' */,
 				26D89A3D1DAAB81C00BDD63B /* Extensions */,
 				26D89A381DAAA48700BDD63B /* Repositories */,
 				26D89A351DAA9CC200BDD63B /* Services */,
 				265F04E41DA9B9EE0011D977 /* Models */,
 				265F04B61DA9B98C0011D977 /* AppDelegate.swift */,
-				265F04B81DA9B98C0011D977 /* ViewController.swift */,
 				265F04BA1DA9B98C0011D977 /* Main.storyboard */,
 				265F04BD1DA9B98C0011D977 /* Assets.xcassets */,
 				265F04BF1DA9B98C0011D977 /* LaunchScreen.storyboard */,
@@ -177,6 +180,22 @@
 				26D89A3E1DAAB85B00BDD63B /* AlbumRepository+Async.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		26D89A431DAAC0C400BDD63B /* ViewModels' */ = {
+			isa = PBXGroup;
+			children = (
+				26D89A451DAAC19A00BDD63B /* AlbumsViewModel.swift */,
+			);
+			name = "ViewModels'";
+			sourceTree = "<group>";
+		};
+		26D89A441DAAC0FF00BDD63B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				265F04B81DA9B98C0011D977 /* AlbumsView.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		C4618E8452818D10F4472C5B /* Frameworks */ = {
@@ -384,8 +403,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26D89A461DAAC19A00BDD63B /* AlbumsViewModel.swift in Sources */,
 				26D89A3F1DAAB85B00BDD63B /* AlbumRepository+Async.swift in Sources */,
-				265F04B91DA9B98C0011D977 /* ViewController.swift in Sources */,
+				265F04B91DA9B98C0011D977 /* AlbumsView.swift in Sources */,
 				265F04B71DA9B98C0011D977 /* AppDelegate.swift in Sources */,
 				26D89A341DAA9AD300BDD63B /* AlbumDTO.swift in Sources */,
 				26D89A3A1DAAA4B400BDD63B /* AlbumRepository.swift in Sources */,
