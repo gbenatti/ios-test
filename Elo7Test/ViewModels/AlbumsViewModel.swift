@@ -8,12 +8,23 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
 class AlbumsViewModel
 {
     let title = "Elo7"
+    
+    var loaded = Variable<Bool>(false)
 
     var albums: Observable<[Album]> {
         return AlbumRepository.loadAllAsync().shareReplay(1)
+    }
+    
+    private let bag = DisposeBag()
+    
+    init() {
+        albums
+            .subscribe(onNext: {[unowned self] _ in self.loaded.value = true } )
+            .addDisposableTo(bag)
     }
 }

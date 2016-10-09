@@ -13,9 +13,11 @@ import RxDataSources
 class AlbumsView: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var loadingView: LoadingView!
     
-    let bag = DisposeBag()
     let viewModel = AlbumsViewModel()
+
+    let bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,10 +27,16 @@ class AlbumsView: UIViewController {
     private func bindUI()
     {
         navigationItem.title = viewModel.title
-
-        viewModel.albums.bindTo(tableView.rx.items(cellIdentifier: "AlbumCellId")) { index, model, cell in
+        
+        viewModel.albums
+            .bindTo(tableView.rx.items(cellIdentifier: "AlbumCellId")) { index, model, cell in
             cell.textLabel?.text = model.title
         }.addDisposableTo(bag)
+
+        viewModel.loaded
+            .asObservable()
+            .subscribe(onNext: { [unowned self] state in self.loadingView.isHidden = state })
+            .addDisposableTo(bag)
     }
     
     override func didReceiveMemoryWarning() {
