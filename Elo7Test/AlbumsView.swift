@@ -44,7 +44,10 @@ class AlbumsView: UIViewController {
 
         viewModel.loaded
             .asObservable()
-            .subscribe(onNext: { [unowned self] state in self.loadingView.isHidden = state })
+            .subscribe(onNext: { [unowned self] state in
+                self.loadingView.isHidden = state
+                self.tableView.isHidden = !state
+                })
             .addDisposableTo(bag)
         
         tableView.rx

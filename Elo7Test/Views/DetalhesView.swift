@@ -35,7 +35,10 @@ class DetalhesView : UIViewController
         
         viewModel?.url.asObservable()
             .subscribe(onNext: { [unowned self] url in
-                self.topImageView.af_setImage(withURL: URL(string: url)!)
+                self.topImageView
+                    .af_setImage(withURL: URL(string: url)!,
+                                 placeholderImage: UIImage(named: "default"),
+                                 imageTransition: .crossDissolve(0.2))
             })
             .addDisposableTo(bag)
     }
