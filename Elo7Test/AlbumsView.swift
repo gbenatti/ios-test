@@ -32,10 +32,15 @@ class AlbumsView: UIViewController {
         viewModel.albums
             .bindTo(tableView.rx.items(cellIdentifier: "AlbumCellId")) { index, model, cell in
                 if let albumCell = cell as? AlbumTableViewCell {
+                    let corner = albumCell.circularImageView.frame.width / 2
+                    let filter = RoundedCornersFilter(radius: corner)
+                    
+                    let placeholderImage = filter.filter(UIImage(named: "default")!)
+                    
                     albumCell.circularImageView
                         .af_setImage(withURL: URL(string: model.thumbnailUrl)!,
-                                     placeholderImage: UIImage(named: "default"),
-                                     filter: RoundedCornersFilter(radius: 20.0),
+                                     placeholderImage: placeholderImage,
+                                     filter: filter,
                                      imageTransition: .crossDissolve(0.2))
                     
                     albumCell.titleLabel?.text = model.title

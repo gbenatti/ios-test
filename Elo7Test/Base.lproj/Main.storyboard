@@ -38,15 +38,25 @@
                                                         <constraint firstAttribute="width" secondItem="5GI-ka-kvY" secondAttribute="height" id="MQE-dZ-NZ3"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dd-Kz-OO6" userLabel="Title">
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="3dd-Kz-OO6" firstAttribute="bottom" secondItem="5GI-ka-kvY" secondAttribute="bottom" id="Bdz-8X-5vd"/>
                                                 <constraint firstItem="5GI-ka-kvY" firstAttribute="top" secondItem="eUI-NZ-P5y" secondAttribute="topMargin" id="FHn-Y7-tZb"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="5GI-ka-kvY" secondAttribute="bottom" id="FpD-A9-Vxp"/>
+                                                <constraint firstItem="3dd-Kz-OO6" firstAttribute="top" secondItem="5GI-ka-kvY" secondAttribute="top" id="f5i-Uh-TuZ"/>
                                                 <constraint firstItem="5GI-ka-kvY" firstAttribute="leading" secondItem="eUI-NZ-P5y" secondAttribute="leadingMargin" id="jQo-M0-9D6"/>
+                                                <constraint firstItem="3dd-Kz-OO6" firstAttribute="leading" secondItem="5GI-ka-kvY" secondAttribute="trailing" constant="15" id="sCl-yj-eE9"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3dd-Kz-OO6" secondAttribute="trailing" id="soY-5s-YYz"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="circularImageView" destination="5GI-ka-kvY" id="5MY-X0-9K0"/>
+                                            <outlet property="titleLabel" destination="3dd-Kz-OO6" id="zci-P5-jv6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
