@@ -12,7 +12,6 @@ target 'Elo7Test' do
     pod 'RxCocoa', '~> 3.0.0-beta.2'
     pod 'RxDataSources', '1.0.0-beta.2'
     
-    pod 'Kingfisher'
     pod 'SwiftyJSON'
     
     pod 'SnapKit'
