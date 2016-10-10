@@ -7,6 +7,7 @@ PODS:
   - AlamofireObjectMapper (4.0.0):
     - Alamofire (~> 4.0)
     - ObjectMapper (~> 2.0)
+  - GSKStretchyHeaderView (0.12.2)
   - Kingfisher (3.1.1)
   - ObjectMapper (2.0.0)
   - ReachabilitySwift (3)
@@ -24,6 +25,7 @@ DEPENDENCIES:
   - AlamofireImage (~> 3.1)
   - AlamofireNetworkActivityIndicator
   - AlamofireObjectMapper (~> 4.0)
+  - GSKStretchyHeaderView
   - Kingfisher
   - ReachabilitySwift
   - RxCocoa (~> 3.0.0-beta.2)
@@ -37,6 +39,7 @@ SPEC CHECKSUMS:
   AlamofireImage: bb8c8351c51cb1633bb6be69b6dbbaff37ce65b7
   AlamofireNetworkActivityIndicator: 3e55069ada3e1ff7703665156429eedcdfea0bc1
   AlamofireObjectMapper: 9faa3ce5a240efda1b209009a2d6e1e949227abc
+  GSKStretchyHeaderView: affdd9f3ae6d6f3cea31dccf604367c617d037ad
   Kingfisher: 12b755ae697cc9f0fd3e550db8417fa1233e09ab
   ObjectMapper: aed2570edabbd3c9b26c939e1cabdb6558f933e0
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
@@ -46,6 +49,6 @@ SPEC CHECKSUMS:
   SnapKit: f818b8326d45b4e1c777d0ab27b5c0a3624bfdeb
   SwiftyJSON: 29b9f2a64f118c07e691667c2ba1efe536acfe0b
 
-PODFILE CHECKSUM: e0e702d5ed9ecd7a6c303ec19167c6b4df0402d6
+PODFILE CHECKSUM: 0f8dfd95759bbec1b8b5da3da380a8992272fe30
 
 COCOAPODS: 1.1.0.rc.2

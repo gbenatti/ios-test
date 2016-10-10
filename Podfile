@@ -16,6 +16,7 @@ target 'Elo7Test' do
     pod 'SwiftyJSON'
     
     pod 'SnapKit'
+    pod 'GSKStretchyHeaderView'
 end
 
 post_install do |installer|

@@ -7,16 +7,17 @@
 //
 
 import Foundation
+import RxSwift
 
 class AlbumDetalhesViewModel
 {
-    let title: String
-    let url: String
-    let thumbnailUrl: String
+    let title = Variable("")
+    let url = Variable("")
+    let thumbnailUrl = Variable("")
     
     init(model: Album) {
-        title = model.title
-        url = model.url
-        thumbnailUrl = model.thumbnailUrl
+        title.value = model.title
+        url.value = model.url
+        thumbnailUrl.value = model.thumbnailUrl
     }
 }

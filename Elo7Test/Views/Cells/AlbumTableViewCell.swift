@@ -11,7 +11,6 @@ import UIKit
 
 class AlbumTableViewCell : UITableViewCell
 {
-    @IBOutlet weak var circularImageView: CircularImageView!
+    @IBOutlet weak var circularImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    
 }

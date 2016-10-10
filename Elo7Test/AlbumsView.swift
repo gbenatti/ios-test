@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxDataSources
+import AlamofireImage
 
 class AlbumsView: UIViewController {
     
@@ -31,7 +32,12 @@ class AlbumsView: UIViewController {
         viewModel.albums
             .bindTo(tableView.rx.items(cellIdentifier: "AlbumCellId")) { index, model, cell in
                 if let albumCell = cell as? AlbumTableViewCell {
-                    albumCell.circularImageView.loadAsync(withImageUrl: model.thumbnailUrl)
+                    albumCell.circularImageView
+                        .af_setImage(withURL: URL(string: model.thumbnailUrl)!,
+                                     placeholderImage: UIImage(named: "default"),
+                                     filter: RoundedCornersFilter(radius: 20.0),
+                                     imageTransition: .crossDissolve(0.2))
+                    
                     albumCell.titleLabel?.text = model.title
                 }
         }.addDisposableTo(bag)
